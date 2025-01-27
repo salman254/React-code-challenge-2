@@ -9,7 +9,7 @@ function App() {
 
   // Fetch bots data from the server
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/bots`)
+    fetch("https://bots-si0g.onrender.com/bots")
       .then((response) => response.json())
       .then((data) => setBots(data))
       .catch((error) => console.error("Error fetching bots:", error));
@@ -29,7 +29,7 @@ function App() {
 
   // Function to discharge a bot permanently
   const dischargeBot = (bot) => {
-    fetch(`${process.env.REACT_APP_API_URL}/bots/${bot.id}`, { method: "DELETE" })
+    fetch(`https://bots-si0g.onrender.com/bots/${bot.id}`, { method: "DELETE" })
       .then(() => {
         setArmy(army.filter((b) => b.id !== bot.id));
         setBots(bots.filter((b) => b.id !== bot.id));
