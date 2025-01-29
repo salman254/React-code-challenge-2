@@ -4,8 +4,8 @@ import BotArmy from "./components/BotArmy";
 import "./App.css";
 
 function App() {
-  const [bots, setBots] = useState([]); // State for all bots
-  const [army, setArmy] = useState([]); // State for enlisted bots
+  const [bots, setBots] = useState([]); // State for all bots from backend
+  const [army, setArmy] = useState([]); // State for bot choosen by user
 
   // Fetch bots data from the server
   useEffect(() => {
@@ -37,6 +37,7 @@ function App() {
       .catch((error) => console.error("Error discharging bot:", error));
   };
 
+  // Rendering the UI
   return (
     <div className="App">
       <h1>Bot Battlr</h1>

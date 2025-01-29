@@ -33,3 +33,4 @@ db.json: Contains the bot data served by the JSON server.
 public/: Contains static assets like images.
 
 src/App.css: Contains styles for the application.
+
